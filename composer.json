@@ -1,0 +1,33 @@
+{
+    "name": "pruanik/laravel-soap-lanbilling-client",
+    "description": "A package to connect and manfunctions ACP Lanbilling functions.",
+    "keywords": ["laravel", "soap", "client", "wrapper", "lanbilling"],
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "pruanik",
+            "email": "pav2089@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    	"php": ">=7.0.1",
+        "ext-soap": "*"
+    },
+    "autoload":{
+    	"psr-0": {
+    		"Pruanik\\LanbillingClient": "src/"
+    	}
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pruanik\\LanbillingClient\\ServiceProvider"
+            ],
+            "aliases": {
+                "LanbillingClient": "Pruanik\\LanbillingClient\\Facade"
+            }
+        }
+    }
+}
